@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "a2d74fbf-2e20-4270-80a7-fb2cc54ed015",
+		"name": "SGT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27413904"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/books?page=4&limit=5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "4"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"farrrfsdfrrr\",\r\n    \"email\": \"farharrrfsdr22n@gmail.com\",\r\n    \"phone\": \"08567909964\",\r\n    \"address\": \"Bandung\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/members",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book_id\": \"14ed990e-8fce-46fb-9c54-9ff17af5c783\",\r\n    \"member_id\": \"b6958a93-926b-461d-a1b7-75d3a2e3c954\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/borrowings",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"borrowings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/borrowings/67178ee7-7718-4dca-9a2e-b852a63033/return",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"borrowings",
+						"67178ee7-7718-4dca-9a2e-b852a63033",
+						"return"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/members/b6958a93-926b-461d-a1b7-75d2e3c954/borrowings?status=BORROWED&page=1&limit=2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"members",
+						"b6958a93-926b-461d-a1b7-75d2e3c954",
+						"borrowings"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "BORROWED"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

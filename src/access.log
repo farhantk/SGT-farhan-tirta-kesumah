@@ -1,0 +1,4 @@
+[0mPOST /api/members [32m201[0m 117.346 ms - 189[0m
+POST /api/members 400 50 - 3.326 ms
+POST /api/members 201 192 - 113.197 ms
+POST /api/members 201 198 - 237.080 ms | Body: {"name":"farrrfsdfrrr","email":"farharrrfsdr22n@gmail.com","phone":"08567909964","address":"Bandung"} | Query: {} | Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.43.0","accept":"*/*","cache-control":"no-cache","postman-token":"daf05a98-f9c8-4bf0-b6a6-0946dd8f0e0a","host":"localhost:3000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"131"}
